@@ -8,9 +8,12 @@ import Main from './components/Main'
 import Login from './components/Login'
 
 import user from './reducers/user'
+import notes from './reducers/notes'
+
 
 const reducer = combineReducers({
-  user: user.reducer
+  user: user.reducer,
+  notes: notes.reducer
 })
 
 const store = configureStore({ reducer })
