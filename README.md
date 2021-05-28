@@ -10,5 +10,5 @@ Main problem was connection to cloud MongoDB database
 ## View it live
 
 The application is alive on Netlify server:
-https://kind-knuth-2345f5.netlify.app/login
+https://kind-knuth-2345f5.netlify.app
 
