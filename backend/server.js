@@ -9,11 +9,6 @@ const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/authAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 mongoose.Promise = Promise
 
-// Defines the port the app will run on. Defaults to 8080, but can be 
-// overridden when starting the server. For example:
-//
-//   PORT=9000 npm start
-
 const Note = mongoose.model('Note', {
   message: String
 })
@@ -114,13 +109,11 @@ app.post('/signin', async (req, res) => {
         username: user.username,
         accessToken: user.accessToken
       })
-
     } else {
       res.status(404).json({ success: false, message: "User not found" })
     }
   } catch {
     res.status(400).json({ success: false, message: "Invalid request", error })
-
   }
 })
 
